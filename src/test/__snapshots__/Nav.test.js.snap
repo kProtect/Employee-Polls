@@ -25,7 +25,7 @@ Object {
           </li>
           <li>
             <a
-              href="/new"
+              href="/add"
             >
               New
             </a>
@@ -68,7 +68,7 @@ Object {
         </li>
         <li>
           <a
-            href="/new"
+            href="/add"
           >
             New
           </a>

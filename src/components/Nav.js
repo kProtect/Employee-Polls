@@ -14,7 +14,7 @@ const Nav = ({dispatch, authedUserId}) => {
             <ul style={ {textTransform: 'uppercase'}}>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/leaderboard">Leaderboard</Link></li>
-            <li><Link to="/new">New</Link></li>
+            <li><Link to="/add">New</Link></li>
             <li><span data-testid="employee" >User: {authedUserId}</span></li>
             <li><button onClick={logout}>Logout</button></li>
             </ul>

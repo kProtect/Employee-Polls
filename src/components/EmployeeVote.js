@@ -1,6 +1,7 @@
 import {connect} from "react-redux";
 import {Navigate, useNavigate, useParams} from "react-router-dom";
 import {handleAddAnswer} from "../actions/questions";
+import "./EmployeeVoteStyle.css"
 
 const EmployeeVote = ({dispatch, authedUser, question, author}) => {
     const navigate = useNavigate();
@@ -46,14 +47,15 @@ const EmployeeVote = ({dispatch, authedUser, question, author}) => {
             <div >
                 <h2 >Would You Rather?</h2>
             </div>
+
             <div data-testid="option-conatiner" >
-                <button onClick={handleOptionOne} disabled={done}>
-                    <div className={doneForOptionOne ? "chosen" : ""}>
+
+                <button className={doneForOptionOne ? "choosedOption" : ""} onClick={handleOptionOne} disabled={done}>
                         <p >{question.optionOne.text}</p>
                         {!done &&<p >Click</p>}{done &&<p className="text-xs">Votes: {question.optionOne.votes.length} ({totalVote("optionOne", question)})</p>}
-                    </div>
                 </button>
-                <button onClick={handleOptionTwo} disabled={done}>
+
+                <button className={doneForOptionTwo ? "choosedOption" : ""} onClick={handleOptionTwo} disabled={done}>
                     <p >{question.optionTwo.text}</p>{!done && <p >Click</p>} {done && <p >Votes: {question.optionTwo.votes.length} ({totalVote("optionTwo", question)})</p> }
                 </button>
             </div>

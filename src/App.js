@@ -24,7 +24,7 @@ function App({dispatch, online}) {
                 <Route path="/" element={<ReRoute><PollQuestions/></ReRoute>}/>
                 <Route path="/leaderboard" exact element={<ReRoute><Leaderboard/></ReRoute>}/>
                 <Route path="/questions/:id" element={<ReRoute><EmployeeVote/></ReRoute>}/>
-                <Route path="/new" exact element={<ReRoute><EmployeePollQuestion/></ReRoute>}/>
+                <Route path="/add" exact element={<ReRoute><EmployeePollQuestion/></ReRoute>}/>
                 <Route path="/404" exact element={<Error/>}/>
             </Routes>
         </div>
